@@ -1,5 +1,6 @@
 fastapi
-fastapi
-fastapi
-fastapi
-fastapi
+uvicorn
+pandas
+matplotlib
+numpy
+scikit-learn
