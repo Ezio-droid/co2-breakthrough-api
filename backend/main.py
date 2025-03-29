@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "Welcome to the CO2 Breakthrough API!"}
+    return {"message": "Welcome to the CO2 Breakthrough API! API is working."}
 
 @app.post("/upload/")
 async def upload_file(
