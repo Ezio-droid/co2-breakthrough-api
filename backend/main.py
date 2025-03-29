@@ -21,7 +21,10 @@ async def upload_file(
     end_time: float = Form(...),
 ):
     # Read the .dat file
-    df = pd.read_csv(io.BytesIO(file.file.read()), delimiter="\t")
+    df = pd.read_csv(io.BytesIO(file.file.read()), delimiter="\t", header=None)
+
+    # Assign headers manually
+    df.columns = ["time", "co2"]
 
     # Extract data
     x = df[time_column].values
