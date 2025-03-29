@@ -24,7 +24,7 @@ async def upload_file(
     df = pd.read_csv(io.BytesIO(file.file.read()), delimiter="\t", header=None)
 
     # Assign headers manually
-    df.columns = ["time", "co2"]
+    df.columns = ['time', 'co2']
 
     # Extract data
     x = df[time_column].values
